@@ -12,12 +12,17 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
 test {
     useJUnitPlatform()
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
 run {
@@ -25,10 +30,5 @@ run {
 }
 
 application {
-    mainClass = "app/Application"
-}
-
-javafx {
-    version = "16"
-    modules = [ 'javafx.controls' ]
+    mainClass = "app.Application"
 }
